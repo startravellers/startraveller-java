@@ -37,4 +37,17 @@ public interface ChoiceContracts {
 				17
 		};
 	}
+	interface SpeciesChoice {
+		String TAG = "Species Choice";
+		String[] OPTIONS = new String[] {
+				"HUMAN",
+				"ARCHON",
+				"HOMUNCULUS",
+				"TSUKU",
+				"NYMPH",
+				"JOTUNN",
+				"VESP",
+				"NIX"
+		};
+	}
 }
