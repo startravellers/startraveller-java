@@ -2,6 +2,7 @@ package startraveler;
 
 import rpg.character.PointBuy;
 import rpg.character.PointBuyVerifier;
+import rpg.character.SingleChoiceNoRestrictionsVerifier;
 
 public class VerifierFactory {
 	public PointBuyVerifier getAbilityPointBuyVerifier() {
@@ -16,6 +17,13 @@ public class VerifierFactory {
 						ChoiceContracts.AbilityPurchase.ABILITIES
 						),
 				ChoiceContracts.AbilityPurchase.TAG
+				);
+	}
+	public SingleChoiceNoRestrictionsVerifier getSpeciesVerifier() {
+		return new SingleChoiceNoRestrictionsVerifier(
+					ChoiceContracts.SpeciesChoice.TAG,
+					ChoiceContracts.SpeciesChoice.OPTIONS.length,
+					null
 				);
 	}
 }

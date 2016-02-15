@@ -35,7 +35,7 @@ public class AbilityPointBuyVerifierTest {
 
 	@Test
 	public void defaultPurchaseIsLegal() {
-		assertTrue(verifier.verify(verifier.getDefaultPurchase()));
+		assertTrue(verifier.verify(verifier.getDefault()));
 	}
 	
 	@Test

@@ -26,7 +26,7 @@ public class VerifierTests {
 			}
 
 			@Override
-			public BooleanPurchase getDefaultPurchase() {
+			public BooleanPurchase getDefault() {
 				// TODO Auto-generated method stub
 				return null;
 			}
@@ -44,7 +44,7 @@ public class VerifierTests {
 			}
 
 			@Override
-			public BooleanPurchase getDefaultPurchase() {
+			public BooleanPurchase getDefault() {
 				// TODO Auto-generated method stub
 				return null;
 			}
@@ -74,7 +74,7 @@ public class VerifierTests {
 				return ret;
 			}
 			@Override
-			public StringPurchase getDefaultPurchase() {
+			public StringPurchase getDefault() {
 				// TODO Auto-generated method stub
 				return null;
 			}
@@ -101,7 +101,7 @@ public class VerifierTests {
 			}
 
 			@Override
-			public IntegerPurchase getDefaultPurchase() {
+			public IntegerPurchase getDefault() {
 				// TODO Auto-generated method stub
 				return null;
 			}

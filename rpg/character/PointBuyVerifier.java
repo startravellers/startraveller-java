@@ -54,7 +54,7 @@ public class PointBuyVerifier extends Verifier<PointBuy> {
 	}
 
 	@Override
-	public PointBuy getDefaultPurchase() {
+	public PointBuy getDefault() {
 		return _default;
 	}
 }
