@@ -35,4 +35,11 @@ public class ChoiceFactory {
 	public Declaration getName(String name) {
 		return new Declaration("NAME", name);
 	}
+	public MultipleChoice chooseClasses(int[] choices) {
+		return new MultipleChoice(
+					ChoiceContracts.Classes.TAG,
+					choices
+				);
+				
+	}
 }

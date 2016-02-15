@@ -50,4 +50,37 @@ public interface ChoiceContracts {
 				"NIX"
 		};
 	}
+	interface Classes {
+		String TAG = "Classes";
+		String[] OPTIONS = {
+				"SWORDFIEND",
+				"MARTIAL ARTIST",
+				"DYNAMIC DUO",
+				"SHARPSHOOTER",
+				"BODYGUARD",
+				"ARTILLERY CAPTAIN",
+				"BRUTE",
+				"GUNSLINGER",
+				"FORTRESS",
+				"CHAMPION",
+				"CON ARTIST",
+				"SHIP\'S ENGINEER",
+				"RANGER",
+				"INFILTRATOR",
+				"SCAVENGER",
+				"PILOT",
+				"STRATEGIST",
+				"CALIBRIST",
+				"FREERUNNER",
+				"MEDEIC",
+				"SUPERCHARGER",
+				"WEBMASTER",
+				"CHRONOGRAPHER",
+				"PREDATOR",
+				"APOTHECARY",
+				"MACABRE",
+				"INQUISITOR",
+				"JINX"
+		};
+	}
 }
