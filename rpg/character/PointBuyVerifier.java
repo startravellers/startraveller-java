@@ -22,6 +22,9 @@ public class PointBuyVerifier extends Verifier<PointBuy> {
 	}
 	@Override
 	public boolean verify(PointBuy purchase) {
+		if (!purchase.getTag().equalsIgnoreCase(_name)) {
+			throw new IllegalArgumentException("PointBuy " + purchase + " not recognized.");
+		}
 		int[] abilityScores = purchase.getScores();
 		int sum = 0;
 		int score;
@@ -54,10 +57,4 @@ public class PointBuyVerifier extends Verifier<PointBuy> {
 	public PointBuy getDefaultPurchase() {
 		return _default;
 	}
-
-	@Override
-	public String toString() {
-		return _name;
-	}
-	
 }
