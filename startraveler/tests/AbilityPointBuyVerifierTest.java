@@ -2,18 +2,32 @@ package startraveler.tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.BeforeClass;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Test;
 
-import startraveler.AbilityPurchase;
-import startraveler.AbilityPointBuyVerifier;
+import rpg.character.PointBuy;
+import rpg.character.PointBuyVerifier;
+import startraveler.ChoiceFactory;
+import startraveler.VerifierFactory;
 
 public class AbilityPointBuyVerifierTest {
 
-	private AbilityPurchase purchase;
-	private AbilityPointBuyVerifier verifier = new AbilityPointBuyVerifier();
-;
-
+	private PointBuy purchase;
+	private static PointBuyVerifier verifier;
+	private static ChoiceFactory choiceFactory;
+	
+	@BeforeClass
+	public static void initialSetup() {
+		choiceFactory = new ChoiceFactory();
+		verifier = new VerifierFactory().getAbilityPointBuyVerifier();
+	}
+	@AfterClass
+	public static void finalTeardown() {
+		choiceFactory = null;
+		verifier = null;
+	}
 	@After
 	public void tearDown() {
 		purchase = null;
@@ -26,32 +40,32 @@ public class AbilityPointBuyVerifierTest {
 	
 	@Test
 	public void lowerThanMinIsIllegal() {
-		purchase = new AbilityPurchase(6, 10, 10, 10, 10, 10);
+		purchase = choiceFactory.getAbilityPurchase(6, 10, 10, 10, 10, 10);
 		assertFalse(verifier.verify(purchase));
 	}
 	@Test
 	public void higherThanMaxIsIllegal() {
-		purchase = new AbilityPurchase(10, 10, 10, 20, 10, 10);
+		purchase = choiceFactory.getAbilityPurchase(10, 10, 10, 20, 10, 10);
 		assertFalse(verifier.verify(purchase));
 	}
 	@Test
 	public void tooManyPointsSpentIsIllegal() {
-		purchase = new AbilityPurchase(13, 11, 13, 13, 13, 13);
+		purchase = choiceFactory.getAbilityPurchase(13, 11, 13, 13, 13, 13);
 		assertFalse(verifier.verify(purchase));
 	}
 	@Test
 	public void canHitMaxValue() {
-		purchase = new AbilityPurchase(10, 10, 10, 10, 8, 18);
+		purchase = choiceFactory.getAbilityPurchase(10, 10, 10, 10, 8, 18);
 		assertTrue(verifier.verify(purchase));
 	}
 	@Test
 	public void canHitMinValue() {
-		purchase = new AbilityPurchase(12, 12, 7, 12, 8, 17);
+		purchase = choiceFactory.getAbilityPurchase(12, 12, 7, 12, 8, 17);
 		assertTrue(verifier.verify(purchase));
 	}
 	@Test
 	public void canSpendAllPoints() {
-		purchase = new AbilityPurchase(15, 12, 13, 10, 11, 12);
+		purchase = choiceFactory.getAbilityPurchase(15, 12, 13, 10, 11, 12);
 		assertTrue(verifier.verify(purchase));
 	}
 	

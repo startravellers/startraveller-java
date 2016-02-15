@@ -2,17 +2,17 @@ package rpg.character;
 
 import startraveler.RuleViolationsLog;
 
-public class PointBuyVerifier<P extends PointBuy> extends Verifier<P> {
+public class PointBuyVerifier extends Verifier<PointBuy> {
 	private static final String ERROR_MESSAGE = "%s score too %s. Was %d should be %d";
 
 	private int _points;
 	private int _minValue;
 	private int _maxValue;
 	private int[] _costs;
-	private P _default;
+	private PointBuy _default;
 	private String _name;
 	
-	public PointBuyVerifier(int points, int min, int max, int[] costs, P defaultPurchase, String verifierName) {
+	public PointBuyVerifier(int points, int min, int max, int[] costs, PointBuy defaultPurchase, String verifierName) {
 		_points = points;
 		_minValue = min;
 		_maxValue = max;
@@ -21,7 +21,7 @@ public class PointBuyVerifier<P extends PointBuy> extends Verifier<P> {
 		_name = verifierName;
 	}
 	@Override
-	public boolean verify(P purchase) {
+	public boolean verify(PointBuy purchase) {
 		int[] abilityScores = purchase.getScores();
 		int sum = 0;
 		int score;
@@ -51,7 +51,7 @@ public class PointBuyVerifier<P extends PointBuy> extends Verifier<P> {
 	}
 
 	@Override
-	public P getDefaultPurchase() {
+	public PointBuy getDefaultPurchase() {
 		return _default;
 	}
 

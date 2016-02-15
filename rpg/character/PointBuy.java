@@ -1,6 +1,6 @@
 package rpg.character;
 
-public class PointBuy extends Choice implements Cloneable{
+public class PointBuy extends Choice {
 	private int[] _scores;
 	private String[] _categories;
 	
@@ -14,9 +14,5 @@ public class PointBuy extends Choice implements Cloneable{
 	}
 	public String[] getCategories() {
 		return _categories;
-	}
-	@Override
-	public PointBuy clone() {
-		return new PointBuy(getTag(), _scores, _categories);
 	}
 }
