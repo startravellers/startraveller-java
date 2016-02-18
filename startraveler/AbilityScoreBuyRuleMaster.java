@@ -8,7 +8,7 @@ public class AbilityScoreBuyRuleMaster extends Rule<PointBuy> {
 	AbilityScoreBuyRuleMaster(Writer writer){
 		super(writer);
 	}
-	public void write(PointBuy pointBuy) {
+	public void applyRule(PointBuy pointBuy) {
 		if (!pointBuy.getTag().equalsIgnoreCase(ChoiceContracts.AbilityPurchase.TAG)) {
 			throw new IllegalArgumentException("PointBuy " + pointBuy + " not recognized");
 		}
