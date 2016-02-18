@@ -1,10 +1,10 @@
 package startraveler;
 
 import rpg.character.PointBuy;
-import rpg.character.RuleMaster;
+import rpg.character.Rule;
 import rpg.character.Writer;
 
-public class AbilityScoreBuyRuleMaster extends RuleMaster<PointBuy> {
+public class AbilityScoreBuyRuleMaster extends Rule<PointBuy> {
 	AbilityScoreBuyRuleMaster(Writer writer){
 		super(writer);
 	}
