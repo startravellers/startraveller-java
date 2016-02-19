@@ -40,6 +40,5 @@ public class ChoiceFactory {
 					ChoiceContracts.Classes.TAG,
 					choices
 				);
-				
 	}
 }
