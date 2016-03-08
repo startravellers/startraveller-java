@@ -19,4 +19,10 @@ public class ConsoleWriter extends Writer {
 	@Override
 	public void unregisterRule(IndirectRule<?> rule){}
 
+	@Override
+	public void notifyListeners() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

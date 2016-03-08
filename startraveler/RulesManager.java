@@ -15,7 +15,7 @@ public class RulesManager {
 				for (int i = 0; i < choice.getScores().length; i++)
 				_writer.add(choice.getTag(), choice.getCategories()[i], choice.getScores()[i]);
 			}
-			_writer.notify();
+			//_writer.notifyListeners();
 		};
 	}
 }
