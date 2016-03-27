@@ -1,7 +1,7 @@
 package core.builder;
 
 import core.*;
-import core.Character;//Explicitly imported to avoid confusion with java.lang.Character
+import core.DisplayCharacter;
 
 public abstract class Builder {
 	private ChoiceFactory _choiceFactory;
@@ -37,7 +37,7 @@ public abstract class Builder {
 		_precharacter.accept(_choiceFactory.create(name, choice));
 		return this;
 	}
-	public Character build() {
+	public DisplayCharacter build() {
 		if (_validator.validateCharacter(_precharacter, _gameSystem)) {
 			return _assembler.assemble(_precharacter, _gameSystem);
 		}

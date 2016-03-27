@@ -1,6 +1,7 @@
 package startraveller;
 
 import core.PreCharacter;
+import core.DisplayCharacter;
 
 public class STValidator {
 	private STSubValidator _subValidator;

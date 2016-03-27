@@ -1,6 +1,5 @@
 package startraveller;
 
-import core.Character;
 import core.GameSystem;
 import core.PreCharacter;
 import core.Validator;
