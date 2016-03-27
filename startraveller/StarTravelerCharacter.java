@@ -1,4 +1,4 @@
-package com.mikepors.startraveler.main;
+package startraveller;
 
 public interface StarTravelerCharacter {
 	String getName();

@@ -1,4 +1,4 @@
-package com.mikepors.startraveler.main;
+package startraveller;
 
 public class StarTravelerCharacterBuilder {
 	public StarTravelerCharacterBuilder() {}

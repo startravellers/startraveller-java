@@ -1,9 +1,9 @@
-package com.mikepors.startraveler.tests;
+package startraveler.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.mikepors.startraveler.main.*;
+import startraveller.*;
 
 public class FemmeFataleCreationTest {
 
