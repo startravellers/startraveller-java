@@ -1,5 +1,5 @@
 package core;
 
 public interface Assembler {
-	Character assemble(PreCharacter preCharacter);
+	Character assemble(PreCharacter preCharacter, GameSystem gameSystem);
 }
