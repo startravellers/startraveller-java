@@ -18,6 +18,9 @@ public class STPreCharacter implements PreCharacter {
 	public STPreCharacter() {
 		_choices = new ArrayList<>();
 	}
+	public Choice get(String id){
+		return null;
+	};
 
 	@Override
 	public void accept(Choice choice) {
