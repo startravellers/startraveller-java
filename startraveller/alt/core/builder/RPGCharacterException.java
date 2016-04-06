@@ -15,6 +15,6 @@ public class RPGCharacterException extends Exception {
 		super(message);
 	}
 	public RPGCharacterException(Ruling ruling) {
-		super(ruling.message());
+		super(ruling.details());
 	}
 }

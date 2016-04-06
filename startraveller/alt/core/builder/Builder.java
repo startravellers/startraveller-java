@@ -32,7 +32,7 @@ public abstract class Builder {
 		if (ruling.isInFavour()) {
 			choice.offerTo(_precharacter);
 		} else {
-			throw new RPGCharacterException(ruling.message());
+			throw new RPGCharacterException(ruling.details());
 		}
 	}
 	public DisplayCharacter build() throws RPGCharacterException {
@@ -40,7 +40,7 @@ public abstract class Builder {
 		if (ruling.isInFavour()) {
 			return _assembler.assemble(_precharacter);
 		}
-		throw new RPGCharacterException(ruling.message());
+		throw new RPGCharacterException(ruling.details());
 	}
 	protected abstract PreCharacter initializePreCharacter();
 }

@@ -1,4 +1,4 @@
-package startraveller.alt.core.builder.implementation;
+package startraveller.alt.core.implementation;
 
 import java.util.Map;
 
@@ -22,7 +22,7 @@ public class STChoiceFactory implements ChoiceFactory {
 		if (values.length != characteristicNames.length) {
 			throw new IllegalArgumentException("Incorrect number of arguments");
 		} else {
-			characteristics = new Characteristic[values.length];
+			characteristics = new Characteristic[values.length]; 
 			for (int i = 0; i < values.length; i++){
 				characteristics[i] = 
 						_characteristicFactory.make(

@@ -1,4 +1,4 @@
-package startraveller.alt.core.builder.implementation;
+package startraveller.alt.core.implementation;
 
 import startraveller.alt.core.Characteristic;
 
