@@ -1,6 +1,5 @@
 package startraveller.alt.core.implementation;
 
-import startraveller.alt.core.Characteristic;
 import startraveller.alt.core.CharacteristicFactory;
 
 public class STCharacteristicFactory implements CharacteristicFactory {
@@ -11,7 +10,7 @@ public class STCharacteristicFactory implements CharacteristicFactory {
 	}
 
 	@Override
-	public Characteristic make(String characteristicName, int value) {
+	public STNumericCharacteristic make(String characteristicName, int value) {
 		return new STNumericCharacteristic(characteristicName, value);
 	}
 	

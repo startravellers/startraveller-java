@@ -9,7 +9,7 @@ public class SimpleRule implements Rule {
 	public SimpleRule(){}
 
 	@Override
-	public Ruling isValid(Characteristic... characteristics) {
+	public Ruling isValid(Characteristic<?>... characteristics) {
 		// TODO Auto-generated method stub
 		return new SimpleRuling(false, "");
 	}

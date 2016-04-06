@@ -2,7 +2,7 @@ package startraveller.alt.core.implementation;
 
 import startraveller.alt.core.Characteristic;
 
-public class STStringCharacteristic implements Characteristic {
+public class STStringCharacteristic implements Characteristic<String> {
 	private String _name;
 	private String _value;
 	
@@ -10,11 +10,12 @@ public class STStringCharacteristic implements Characteristic {
 		_name = name;
 		_value = value;
 	}
-	
+	@Override
 	public String getName() {
 		return _name;
 	}
-	public String getValue() {
+	@Override
+	public String value() {
 		return _value;
 	}
 }

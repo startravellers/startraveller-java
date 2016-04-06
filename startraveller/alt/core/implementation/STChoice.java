@@ -7,9 +7,9 @@ import startraveller.alt.core.Rule;
 import startraveller.alt.core.Ruling;
 
 public class STChoice implements Choice {
-	private Characteristic[] _characteristics;
+	private Characteristic<?>[] _characteristics;
 	private String _choiceName;
-	STChoice(Characteristic...characteristics) {
+	STChoice(Characteristic<?>...characteristics) {
 		_characteristics = characteristics.clone();
 	}
 	@Override
@@ -18,7 +18,7 @@ public class STChoice implements Choice {
 	}
 	@Override
 	public void offerTo(PreCharacter preCharacter) {
-		for (Characteristic characteristic : _characteristics) {
+		for (Characteristic<?> characteristic : _characteristics) {
 			preCharacter.accept(characteristic);
 		}
 	}

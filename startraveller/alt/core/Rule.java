@@ -1,5 +1,5 @@
 package startraveller.alt.core;
 
 public interface Rule {
-	Ruling isValid(Characteristic... characteristics);
+	Ruling isValid(Characteristic<?>... characteristics);
 }

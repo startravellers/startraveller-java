@@ -20,14 +20,14 @@ public abstract class Builder {
 		_precharacter = initializePreCharacter();
 	}	
 	public Builder add(String name, String... values) throws RPGCharacterException {
-		addToPreCharacterOrThrow(_choiceFactory.make(name, values));
+		validateThenAddOrThrow(_choiceFactory.make(name, values));
 		return this;
 	}
 	public Builder add(String name, int... values) throws RPGCharacterException{
-		addToPreCharacterOrThrow(_choiceFactory.make(name, values));
+		validateThenAddOrThrow(_choiceFactory.make(name, values));
 		return this;
 	}
-	private void addToPreCharacterOrThrow(Choice choice) throws RPGCharacterException {
+	private void validateThenAddOrThrow(Choice choice) throws RPGCharacterException {
 		Ruling ruling = _validator.validate(choice);
 		if (ruling.isInFavour()) {
 			choice.offerTo(_precharacter);
@@ -39,8 +39,9 @@ public abstract class Builder {
 		Ruling ruling = _validator.validate(_precharacter);
 		if (ruling.isInFavour()) {
 			return _assembler.assemble(_precharacter);
+		} else {
+			throw new RPGCharacterException(ruling.details());
 		}
-		throw new RPGCharacterException(ruling.details());
 	}
 	protected abstract PreCharacter initializePreCharacter();
 }

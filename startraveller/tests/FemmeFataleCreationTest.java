@@ -1,4 +1,4 @@
-package startraveler.tests;
+package startraveller.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

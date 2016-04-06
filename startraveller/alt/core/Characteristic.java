@@ -1,5 +1,6 @@
 package startraveller.alt.core;
 
-public interface Characteristic {
-	
+public interface Characteristic<T> {
+	String getName();
+	T value();
 }

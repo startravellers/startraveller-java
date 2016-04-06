@@ -9,17 +9,17 @@ import startraveller.alt.core.ValidationStrategy;
 import startraveller.alt.core.Characteristic;
 
 public class STPreCharacter implements PreCharacter {
-	List<Characteristic> _characteristics = new ArrayList<>();
+	List<Characteristic<?>> _characteristics = new ArrayList<>();
 	
 	public STPreCharacter() {}
 	@Override
-	public void accept(Characteristic characteristic) {
+	public void accept(Characteristic<?> characteristic) {
 		_characteristics.add(characteristic);
 		
 	}
 	@Override
 	public Ruling validate(ValidationStrategy strategy) {
-		Characteristic[] characteristics = (Characteristic[]) _characteristics.toArray();
+		Characteristic<?>[] characteristics = (Characteristic[]) _characteristics.toArray();
 		return strategy.validate(characteristics);
 	}
 }

@@ -11,7 +11,7 @@ import startraveller.alt.core.ValidationStrategy;
 public class STValidationStrategy implements ValidationStrategy {
 	Map<String, Rule> _rulebook = new HashMap<>();
 	@Override
-	public Ruling validate(Characteristic... characteristics) {
+	public Ruling validate(Characteristic<?>... characteristics) {
 		//Sort characteristics into a map, then look through all characteristics for corresponding rules and validate against them
 		return null;
 	}
